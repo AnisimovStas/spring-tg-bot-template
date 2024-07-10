@@ -1,0 +1,9 @@
+spring:
+  config:
+    import: optional:file:.env[]
+  application:
+    name: todo-chats-bot
+
+bot:
+  name: "todo_chat_bot"
+  token:
