@@ -1,0 +1,28 @@
+2024-07-10 15:02:43,246 INFO f.t.t.TodoChatBotApplication [main] Starting TodoChatBotApplication using Java 22.0.1 with PID 34726 (/Users/stanislav/projects/java/todoChatBot/target/classes started by stanislav in /Users/stanislav/projects/java/todoChatBot)
+2024-07-10 15:02:43,247 INFO f.t.t.TodoChatBotApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-10 15:02:43,989 INFO f.t.t.TodoChatBotApplication [main] Started TodoChatBotApplication in 0.935 seconds (process running for 1.205)
+2024-07-10 15:02:51,624 INFO f.t.t.s.TelegramBot [todo_chat_bot Telegram Executor] Replied to user Stas
+2024-07-10 15:02:52,636 INFO f.t.t.s.TelegramBot [todo_chat_bot Telegram Executor] Replied to user Stas
+2024-07-10 15:05:48,799 INFO f.t.t.s.TelegramBot [todo_chat_bot Telegram Executor] Replied to user Stas
+2024-07-10 15:05:49,830 INFO f.t.t.s.TelegramBot [todo_chat_bot Telegram Executor] Replied to user Stas
+2024-07-10 15:12:09,779 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [feral.telegram.todo_chat_bot.TodoChatBotApplicationTests]: TodoChatBotApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-10 15:12:09,826 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration feral.telegram.todo_chat_bot.TodoChatBotApplication for test class feral.telegram.todo_chat_bot.TodoChatBotApplicationTests
+2024-07-10 15:12:10,002 INFO f.t.t.TodoChatBotApplicationTests [main] Starting TodoChatBotApplicationTests using Java 21.0.3 with PID 35253 (started by stanislav in /Users/stanislav/projects/java/todoChatBot)
+2024-07-10 15:12:10,003 INFO f.t.t.TodoChatBotApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-10 15:12:10,811 INFO f.t.t.TodoChatBotApplicationTests [main] Started TodoChatBotApplicationTests in 0.933 seconds (process running for 1.477)
+2024-07-10 15:12:15,256 INFO f.t.t.TodoChatBotApplication [main] Starting TodoChatBotApplication using Java 22.0.1 with PID 35261 (/Users/stanislav/projects/java/todoChatBot/target/classes started by stanislav in /Users/stanislav/projects/java/todoChatBot)
+2024-07-10 15:12:15,257 INFO f.t.t.TodoChatBotApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-10 15:12:16,120 INFO f.t.t.TodoChatBotApplication [main] Started TodoChatBotApplication in 1.083 seconds (process running for 1.373)
+2024-07-10 15:12:19,693 INFO f.t.t.s.TelegramBot [todo_chat_bot Telegram Executor] Replied to user Stas
+2024-07-10 15:14:26,971 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [feral.telegram.todo_chat_bot.TodoChatBotApplicationTests]: TodoChatBotApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-10 15:14:27,015 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration feral.telegram.todo_chat_bot.TodoChatBotApplication for test class feral.telegram.todo_chat_bot.TodoChatBotApplicationTests
+2024-07-10 15:14:27,237 INFO f.t.t.TodoChatBotApplicationTests [main] Starting TodoChatBotApplicationTests using Java 21.0.3 with PID 35327 (started by stanislav in /Users/stanislav/projects/java/todoChatBot)
+2024-07-10 15:14:27,238 INFO f.t.t.TodoChatBotApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-10 15:14:28,110 INFO f.t.t.TodoChatBotApplicationTests [main] Started TodoChatBotApplicationTests in 1.04 seconds (process running for 1.598)
+2024-07-10 15:14:28,301 ERROR o.t.t.u.DefaultBotSession [todo_chat_bot Telegram Connection] Error executing org.telegram.telegrambots.meta.api.methods.updates.GetUpdates query: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.updates.GetUpdates query: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54)
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseArray(PartialBotApiMethod.java:39)
+	at org.telegram.telegrambots.meta.api.methods.updates.GetUpdates.deserializeResponse(GetUpdates.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:258)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
