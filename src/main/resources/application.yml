@@ -1,9 +1,22 @@
 spring:
-  config:
-    import: optional:file:.env[]
+  #  config:
+  #    import: optional:file:.env[]
   application:
     name: todo-chats-bot
+  #db  related settings
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todo_chats
+    username: experiment001
+    password: experiment001
+    driver-class-name: org.postgresql.Driver
+
+
 
 bot:
   name: "todo_chat_bot"
-  token: 7080397291:AAGdwMwfrMucqSL26iMQXeze_9VEXn3uq1E
+  token: 7080397291:AAHMvSwrsERzGPa-W7zsQd5cDOw04LqsJFM
