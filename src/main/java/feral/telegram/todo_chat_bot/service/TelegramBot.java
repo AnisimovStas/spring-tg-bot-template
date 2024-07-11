@@ -1,5 +1,6 @@
 package feral.telegram.todo_chat_bot.service;
 
+import com.vdurmont.emoji.EmojiParser;
 import feral.telegram.todo_chat_bot.config.BotConfig;
 import feral.telegram.todo_chat_bot.model.User;
 import feral.telegram.todo_chat_bot.model.userRepository;
@@ -14,6 +15,8 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.commands.BotCommand;
 import org.telegram.telegrambots.meta.api.objects.commands.scope.BotCommandScopeDefault;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.util.ArrayList;
@@ -66,7 +69,7 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-         
+
         if (update.hasMessage() && update.getMessage().hasText()) {
 
             String messageText = update.getMessage().getText();
@@ -112,8 +115,9 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     private void startCommandReceived(long chatId, String name) {
 
-        String answer = "Hi, " + name + ", nice to meet you!";
+//        String answer = "Hi, " + name + ", nice to meet you!";
 
+        String answer = EmojiParser.parseToUnicode("Hi, " + name + ", nice to meet you!" + " ❤\uFE0F");
         log.info("Replied to user {}", name);
         sendMessage(chatId, answer);
     }
@@ -122,6 +126,25 @@ public class TelegramBot extends TelegramLongPollingBot {
         SendMessage message = new SendMessage();
         message.setText(textToSend);
         message.setChatId(chatId);
+
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+
+        List<KeyboardRow> keyboardRows = new ArrayList<>();
+
+        KeyboardRow row = new KeyboardRow();
+        row.add("weather");
+        row.add("get random joke");
+        keyboardRows.add(row);
+
+        row = new KeyboardRow();
+        row.add("register");
+        row.add("check my data");
+        row.add("delete my data");
+
+        keyboardRows.add(row);
+
+        keyboardMarkup.setKeyboard(keyboardRows);
+        message.setReplyMarkup(keyboardMarkup);
 
         try {
             execute(message);
