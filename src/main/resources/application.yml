@@ -21,3 +21,6 @@ bot:
   name: "todo_chat_bot"
   token: 7080397291:AAHMvSwrsERzGPa-W7zsQd5cDOw04LqsJFM
   owner: 426857196
+
+cron:
+  scheduler: "0 * * * * *"
