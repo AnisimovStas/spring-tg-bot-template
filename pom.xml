@@ -28,7 +28,7 @@
     </scm>
     <properties>
         <java.version>21</java.version>
-        <telegram.version>6.8.0</telegram.version>
+        <telegram.version>6.9.7.0</telegram.version>
     </properties>
     <dependencies>
         <dependency>
